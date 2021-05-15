@@ -80,7 +80,7 @@
 
 // console.log("STOP");
 
-(function(){
+/* (function(){
     console.dir(this,{showHidden:true,depth:0});
     this.name="lolaby"
 })()
@@ -97,5 +97,17 @@ setTimeout(function(){
     console.dir(this,{showHidden:false,depth:0});
     console.dir("lolaby",this.name);
     
-}, 23);
+}, 23); */
+let caler;
 
+function callerT(params) {
+    caler=callerT.caller;
+    //console.dir(callerT.caller,{depth:3,showHidden:true});
+    //console.dir(callerT.caller,);
+}
+
+
+
+callerT();
+
+console.dir(arguments,{depth:1,showHidden:true});
